@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="form-outer">
+    <div class="form-header">
+        <h1 id="title">DEVELOPER SURVEY FORM</h1>
+        <P id="description">Let us know which tools you are using.</P>
+    </div>
+    <div class="form-body">
+        <form id="survey-form" method="GET" action="#">
+            <fieldset>
+                <legend>Profile</legend>
+                <div class="rowTab">
+                    <label class="labels" id="name-label" for="name">* Name: </label>
+                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+                </div>
+                <div class="rowTab">
+                    <label class="labels" id="email-label" for="email">* Email: </label>
+                    <input type="email" name="email" id="email" class="input-field" placeholder="Enter your Email" required>
+                </div>
+                <div class="rowTab">
+                    <label class="labels" id="number-label" for="number">* Age: </label>
+                    <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age" required>
+                </div>
+                <div class="rowTab">
+                    <label class="labels" for="dropdown">Which option best describes your current role?</label>
+                    <select id="dropdown" name="currentPos" class="dropdown">
+                        <option disabled selected value>Select an option</option>
+                        <option value="backEnd">Back-end developer</option>
+                        <option value="desktop">Desktop or enterprise applications developer</option>
+                        <option value="fullStack">Full-stack developer</option>
+                        <option value="frontEnd">Front-end developer</option>
+                        <option value="game">Game or graphics developer</option>
+                        <option value="mobile">Mobile developer</option>
+                        <option value="test">QA or test developer</option>
+                        <option value="student">Student</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="rowTab">
+                    <label class="labels">Do you contribute to open source projects?</label>
+                    <div class="radio">
+                        <label for="openSourceYes">Yes <input type="radio" id="openSourceYes" name="openSource" value="1" checked /></label>
+                        <label for="openSourceNo">No <input type="radio" id="openSourceNo" name="openSource" value="2" /></label>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <label class="labels">Do you code as a hobby?</label>
+                    <div class="radio">
+                        <label for="hobbyYes">Yes <input type="radio" id="hobbyYes" name="hobby" value="1" checked></label>
+                        <label for="hobbyNo">No <input type="radio" id="hobbyNo" name="hobby" value="2" ></label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Technology</legend>
+                <div class="rowTab">
+                    <label class="labels" for="most-used">Which programming language is most commonly used by you?</label>
+                    <select id="most-used" name="mostUsed" class="dropdown">
+                        <option disabled selected value>Select an option</option>
+                        <option value="js">JavaScript</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="sql">SQL</option>
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="php">PHP</option>
+                    </select>
+                </div>
+                <div class="rowTab">
+                    <label class="labels">Which Front-End frameworks do you used?<br>(Check all that apply): </label>
+                    <div class="checkbox">
+                        <label for="angular">Angular <input name="frontEnd" id="angular" value="1" type="checkbox"></label>
+                        <label for="react">React <input name="frontEnd" id="react" value="2" type="checkbox"></label>
+                        <label for="vue">Vue <input name="frontEnd" id="vue" value="3" type="checkbox"></label>
+                    </div>
+                </div>
+                <div class="rowTab">
+                    <label class="labels" for="comments">Any Comments or Suggestions?</label>
+                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </fieldset>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="done">Done by Chester Heng.</div>
+</div>
+<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+</body>
+</html>
